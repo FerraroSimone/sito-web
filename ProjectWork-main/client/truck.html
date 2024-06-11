@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title id="pageTitle">Single Food</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header id="header" style="margin-bottom: 78px"></header>
+
+    <main class="d-flex flex-column" style="gap: 10rem">
+      <!-- INFO-->
+      <div class="py-5" style="background-color: rgba(255, 193, 7, 0.182)">
+        <div class="container p-4">
+          <div class="row">
+            <div class="col-md-6">
+              <img
+                src="https://www.vsveicolispeciali.com/wp-content/uploads/2021/08/maracaiba-flotta-food-truck-costi-bassi-business-scalabile.jpg"
+                alt="profile image"
+                class="w-100"
+                id="truck_image"
+              />
+            </div>
+            <div
+              class="col-md-6 d-flex flex-column justify-content-center align-items-center"
+            >
+              <h1 class="py-3" id="truck_name"></h1>
+              <p id="truck_desc" class="text-center"></p>
+              <button type="button" class="btn btn-warning fw-bold">
+                <a href="#menu" class="text-decoration-none text-dark"
+                  >Ordina adesso</a
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- MENU'-->
+      <div class="container" id="menu">
+        <h2 class="pb-4 fw-semibold text-warning">IL NOSTRO MENU'</h2>
+        <div class="row">
+          <div
+            class="col d-flex flex-wrap gap-4 justify-content-center"
+            id="menu_section"
+          ></div>
+        </div>
+      </div>
+
+      <!-- RECENSIONI'-->
+      <div class="container me-0">
+        <h2 class="pb-4 fw-semibold text-warning mb-4">
+          COSA DICONO SU DI NOI
+        </h2>
+        <div class="row position-relative">
+          <div class="col d-flex flex-wrap gap-4 justify-content-center">
+            <div
+              class="bg-warning position-absolute end-0 rounded"
+              style="height: 20rem; width: 35rem; top: -2.5rem"
+            ></div>
+
+            <div class="card p-1" style="max-width: 540px">
+              <div class="row g-0">
+                <div class="col-4">
+                  <img
+                    src="https://www.formagginobili.it/wp-content/uploads/revslider/The7-hero-scene-business/rev-person-img.png"
+                    class="img-fluid"
+                    style="width: 13rem; height: 14rem"
+                    alt="profile"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title text-warning fw-bold">
+                      Giovanni Verga
+                    </h5>
+                    <div class="d-flex gap-1">
+                      <h2 class="">"</h2>
+                      <p class="card-text font-italic">
+                        Cucina eccellente in un ambiente elegante e accogliente.
+                        Servizio impeccabile con personale attento e cortese.
+                        Un'esperienza culinaria altamente raccomandata.
+                      </p>
+                      <h2 class="d-block mt-auto">"</h2>
+                    </div>
+                    <p class="card-text">
+                      <small class="text-muted">06-11-2023</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="card p-1 justify-content-center align-items-center d-none d-lg-flex"
+              style="max-width: 540px"
+            >
+              <div class="row g-0">
+                <div class="col-4">
+                  <img
+                    src="https://purepng.com/public/uploads/large/purepng.com-thinking-manthinking-manpersongentle-men-thinkingthinking-brain-1421526976458gpxqy.png"
+                    class="img-fluid"
+                    style="width: 13rem; height: 14rem"
+                    alt="profile"
+                  />
+                </div>
+                <div class="col-8">
+                  <div class="card-body">
+                    <h5 class="card-title text-warning fw-bold">
+                      Gabriele D'annunzio
+                    </h5>
+                    <div class="d-flex gap-1">
+                      <h2 class="">"</h2>
+                      <p class="card-text font-italic">
+                        Un'esperienza culinaria eccellente con piatti deliziosi
+                        e ben presentati in un ambiente elegante e accogliente.
+                        Servizio impeccabile e vasta selezione di vini italiani.
+                        Consigliato vivamente.
+                      </p>
+                      <h2 class="d-block mt-auto">"</h2>
+                    </div>
+                    <p class="card-text">
+                      <small class="text-muted">20-06-2023</small>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-warning">
+        <div class="row p-0 m-0">
+          <div class="col-md-6 p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                width="100%"
+                height="600"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=1%20Grafton%20Street,%20Dublin,%20Ireland+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+            </div>
+          </div>
+          <div
+            class="col-md-6 d-flex flex-column justify-content-center align-items-center p-5"
+          >
+            <h2>VIENI A TROVARCI</h2>
+            <p>Via Roma 10, Palermo</p>
+            <a href="" class="text-dark fw-bold text-decoration-none"
+              >Chiamaci <span class="text-dark fw-normal" id="mobile"></span
+            ></a>
+
+            <h2 class="mt-4">ORARI DI APERTURA</h2>
+            <ul class="list-inline">
+              <li><span class="fw-bold">Lunedì-Martedì</span> 10:30 - 21:00</li>
+              <li>
+                <span class="fw-bold">Mercoledì-Venerdì</span> 12:30 - 22:30
+              </li>
+              <li><span class="fw-bold">Domenica</span> 10:30 - 21:00</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer"></footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js/components.js"></script>
+    <script src="./js/truck.js"></script>
+  </body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/admin.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Admin</title>
+  </head>
+  <body>
+    <!-- MODALE -->
+    <div
+      class="modal fade"
+      id="myModal"
+      tabindex="-1"
+      aria-labelledby="addTruckModal"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="addTruckModal">Aggiungi Truck</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <!-- FORM MODALE -->
+            <form>
+              <div class="mb-3">
+                <label for="nomeTruck" class="form-label">Nome Truck</label>
+                <input type="text" class="form-control" id="nomeTruck" />
+              </div>
+              <div class="mb-3">
+                <label for="linkImmagine" class="form-label"
+                  >Link immagine</label
+                >
+                <input type="text" class="form-control" id="linkImmagine" />
+              </div>
+              <div class="mb-3">
+                <label for="numTel" class="form-label"
+                  >Numero di telefono</label
+                >
+                <input type="text" class="form-control" id="numTel" />
+              </div>
+              <div class="mb-3">
+                <label for="descrizione" class="form-label">Descrizione</label>
+                <input type="text" class="form-control" id="descrizione" />
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Chiudi
+            </button>
+            <button type="button" class="btn btn-warning fw-semibold">
+              Aggiungi
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <header></header>
+
+    <main>
+      <div
+        id="sidebar-overlay"
+        class="overlay w-100 vh-100 position-fixed d-none"
+      ></div>
+
+      <div class="col-md-12 col-lg-12 ml-md-auto px-0 ms-md-auto">
+        <div
+          class="d-flex justify-content-end align-items-baseline gap-3 border rounded p-3"
+        >
+          <div class="d-flex justify-content-center align-items-baseline gap-2">
+            <i class="fa-sharp fa-solid fa-user-tie fa-xl"></i>
+            <h4 id="nomeUtente"></h4>
+          </div>
+          <button class="btn btn-danger" id="logoutBtn">Logout</button>
+        </div>
+
+        <main class="p-4 min-vh-100">
+          <section class="row">
+            <div class="col-md-6 col-lg-4">
+              <!-- CARD -->
+              <article
+                class="p-4 rounded shadow-sm border-left mb-4"
+                style="cursor: pointer"
+                id="btn_ordini"
+              >
+                <span class="bi bi-box h5"></span>
+                <h5 class="ml-2">Ordini</h5>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article
+                class="p-4 rounded shadow-sm border-left mb-4"
+                style="cursor: pointer"
+                id="btn_prodotti"
+              >
+                <span class="bi bi-person h5"></span>
+                <h5 class="ml-2">Prodotti</h5>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article
+                class="p-4 rounded shadow-sm border-left mb-4"
+                style="cursor: pointer"
+                id="btn_trucks"
+              >
+                <span class="bi bi-person-check h5"></span>
+                <h5 class="ml-2">Trucks</h5>
+              </article>
+            </div>
+          </section>
+
+          <div
+            class="jumbotron jumbotron-fluid rounded bg-white border-0 border-left shadow-sm px-4"
+          >
+            <div class="container">
+              <h3 class="display-5 mb-2 text-warning">Area di lavoro</h3>
+              <div class="container py-3">
+                <div class="row">
+                  <button
+                    class="btn btn-warning fw-semibold"
+                    style="width: fit-content; height: fit-content"
+                    id="addBtn"
+                    data-bs-toggle="modal"
+                    data-bs-target="#myModal"
+                  >
+                    Aggiungi
+                  </button>
+                  <div
+                    id="dashboar_content"
+                    class="col d-flex flex-wrap gap-4 justify-content-center align-items-center p-5"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+      </div>
+    </main>
+
+    <script src="./js/admin.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>
